@@ -1,0 +1,231 @@
+/* --- Rates Master Page Layout Wrapper --- */
+.ratesWrapper {
+  background-color: #0B0C10;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Typographic Investment Header Context --- */
+.ratesHeader {
+  background-color: #0B0C10;
+  padding: 170px 0 40px 0; /* Clear space below fixed navigation bar header */
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.titleStack {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 24px;
+}
+
+.mainTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.2rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: #F4F1EA;
+  margin: 0 0 24px 0;
+}
+
+/* Sub-pixel Antique Gold Thread Dash Line Break */
+.stitchLine {
+  width: 48px;
+  height: 1px;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.4);
+  margin-bottom: 28px;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #F4F1EA;
+  opacity: 0.55;
+  margin: 0;
+}
+
+/* --- Section 1: Transparency Pledge Card --- */
+.pledgeSection {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.pledgeCard {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(20, 21, 26, 0.25);
+  border: 1px solid rgba(74, 59, 50, 0.12);
+  padding: 44px 56px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pledgeTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #D4AF37;
+  margin: 0 0 16px 0;
+}
+
+.pledgeText {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #F4F1EA;
+  opacity: 0.5;
+  margin: 0;
+}
+
+/* --- Core Pricing Menu Layout Section --- */
+.ratesMain {
+  width: 100%;
+  padding-bottom: 120px;
+}
+
+/* --- Priority Escalation Section Boundaries --- */
+.prioritySection {
+  width: 100%;
+  padding-bottom: 140px;
+  border-top: 1px solid rgba(74, 59, 50, 0.1);
+  background-color: #0B0C10;
+}
+
+.priorityHeader {
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.priorityTag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 16px;
+}
+
+.priorityTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  margin: 0 0 20px 0;
+}
+
+.priorityText {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #F4F1EA;
+  opacity: 0.5;
+  max-width: 480px;
+  margin: 0;
+}
+
+/* --- Media Queries: Clean Device Transitions (Tablets & Phones) --- */
+@media (max-width: 1024px) {
+  .ratesHeader {
+    padding: 140px 0 32px 0;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .mainTitle {
+    font-size: 3.4rem;
+  }
+  .description {
+    font-size: 0.95rem;
+  }
+  .pledgeCard {
+    padding: 36px 40px;
+  }
+  .ratesMain {
+    padding-bottom: 80px;
+  }
+  .priorityHeader {
+    margin-top: 100px;
+    margin-bottom: 56px;
+  }
+  .priorityTitle {
+    font-size: 2.4rem;
+  }
+  .prioritySection {
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ratesHeader {
+    padding: 120px 0 24px 0;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .mainTitle {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .pledgeCard {
+    padding: 28px 24px;
+  }
+  .pledgeTitle {
+    font-size: 1.45rem;
+  }
+  .ratesMain {
+    padding-bottom: 60px;
+  }
+  .priorityHeader {
+    margin-top: 80px;
+    margin-bottom: 44px;
+  }
+  .priorityTitle {
+    font-size: 1.95rem;
+    line-height: 1.25;
+  }
+  .prioritySection {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2.1rem;
+  }
+}

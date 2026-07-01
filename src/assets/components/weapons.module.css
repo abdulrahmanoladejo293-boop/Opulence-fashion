@@ -1,0 +1,193 @@
+/* --- Master Instruments Section Canvas --- */
+.weaponsSection {
+  background-color: #0B0C10;
+  padding: 140px 0;
+  width: 100%;
+  border-top: 1px solid rgba(74, 59, 50, 0.1);
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/* --- Centered Section Title Block --- */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #F4F1EA;
+  margin: 0 0 24px 0;
+}
+
+.subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #F4F1EA;
+  opacity: 0.5;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* --- Symmetric 4-Quadrant Display Grid (Desktop layout) --- */
+.quadrantGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* --- High-Class Instrument Item Card --- */
+.toolCard {
+  background-color: rgba(20, 21, 26, 0.25);
+  border: 1px solid rgba(74, 59, 50, 0.12);
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
+}
+
+/* Elite depth opacity hover interactions */
+.toolCard:hover {
+  border-color: rgba(212, 175, 55, 0.25);
+  background-color: rgba(20, 21, 26, 0.45);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.toolId {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #D4AF37;
+  line-height: 1;
+}
+
+.toolPurpose {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #F4F1EA;
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+}
+
+.toolCard:hover .toolPurpose {
+  opacity: 0.8;
+  color: #D4AF37;
+}
+
+.toolName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  margin: 0 0 20px 0;
+}
+
+/* Custom premium dash line response hook */
+.stitchLine {
+  width: 48px;
+  height: 1px;
+  border-bottom: 1px dashed rgba(244, 241, 234, 0.15);
+  margin-bottom: 24px;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease;
+}
+
+.toolCard:hover .stitchLine {
+  width: 100%;
+  border-color: #D4AF37;
+}
+
+.toolDetail {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #F4F1EA;
+  opacity: 0.55;
+  margin: 0;
+  transition: opacity 0.4s ease;
+}
+
+.toolCard:hover .toolDetail {
+  opacity: 0.8;
+}
+
+/* --- Media Queries: Mobile & Tablet Alignment Transforms --- */
+@media (max-width: 1200px) {
+  .toolCard {
+    padding: 44px;
+  }
+  .heading {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .weaponsSection {
+    padding: 100px 0;
+  }
+  .wrapper {
+    padding: 0 40px;
+  }
+  .sectionHeader {
+    margin-bottom: 64px;
+  }
+}
+
+@media (max-width: 820px) {
+  .quadrantGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .heading {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 24px;
+  }
+  .toolCard {
+    padding: 36px 24px;
+  }
+  .heading {
+    font-size: 1.95rem;
+    line-height: 1.25;
+  }
+  .toolName {
+    font-size: 1.7rem;
+  }
+}

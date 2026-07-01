@@ -1,0 +1,192 @@
+/* --- Master Textile Grid Infrastructure --- */
+.swatchGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 40px;
+  width: 100%;
+}
+
+/* --- High-Class Swatch Structural Block --- */
+.swatchCard {
+  background-color: rgba(20, 21, 26, 0.2);
+  border: 1px solid rgba(74, 59, 50, 0.12);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
+}
+
+/* Elite card container depth response layout triggers */
+.swatchCard:hover {
+  border-color: rgba(212, 175, 55, 0.25);
+  background-color: rgba(20, 21, 26, 0.5);
+}
+
+/* --- High-Fidelity Spatial Visual Box --- */
+.visualContainer {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background-color: #12131a;
+  border-bottom: 1px solid rgba(74, 59, 50, 0.1);
+}
+
+.fabricImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.82;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+/* Atmospheric vignette layering inside image viewport frame */
+.shadowVeil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(11, 12, 16, 0.2) 0%, rgba(11, 12, 16, 0.6) 100%);
+  z-index: 2;
+  transition: background 0.4s ease;
+}
+
+/* Minimalist technical serial metadata tag overlay */
+.serialTag {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #D4AF37;
+  background-color: rgba(11, 12, 16, 0.8);
+  padding: 4px 10px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  z-index: 3;
+}
+
+/* Elite compound zoom triggered instantly upon card active state */
+.swatchCard:hover .fabricImage {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.swatchCard:hover .shadowVeil {
+  background: linear-gradient(180deg, rgba(11, 12, 16, 0.1) 0%, rgba(11, 12, 16, 0.75) 100%);
+}
+
+/* --- Typographic Content Matrix Layout --- */
+.textMatrix {
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.originTag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #D4AF37;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.textileName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+/* Expandable custom stitch-dotted boundary break component */
+.stitchDivider {
+  width: 32px;
+  height: 1px;
+  border-bottom: 1px dashed rgba(244, 241, 234, 0.15);
+  margin-bottom: 20px;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease;
+}
+
+.swatchCard:hover .stitchDivider {
+  width: 100%;
+  border-color: #D4AF37;
+}
+
+/* --- Technical Specifications Deck Section --- */
+.specDeck {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.specLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #F4F1EA;
+  opacity: 0.4;
+}
+
+.specValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  opacity: 0.75;
+  transition: color 0.4s ease;
+}
+
+.swatchCard:hover .specValue {
+  color: #D4AF37;
+}
+
+/* --- Media Queries: Immaculate Multi-Breakpoint Fluid Transitions --- */
+@media (max-width: 1100px) {
+  .swatchGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+  }
+  .textileName {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .visualContainer {
+    height: 240px;
+  }
+  .textMatrix {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Absolute conversion into neat, orderly single column display structure */
+  .swatchGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .visualContainer {
+    height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .visualContainer {
+    height: 220px;
+  }
+  .textMatrix {
+    padding: 24px 20px;
+  }
+  .textileName {
+    font-size: 1.4rem;
+  }
+}

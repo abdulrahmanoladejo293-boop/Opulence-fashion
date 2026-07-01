@@ -1,0 +1,152 @@
+/* --- Menu Matrix Architecture --- */
+.menuMatrix {
+  width: 100%;
+  background-color: #0B0C10;
+}
+
+.columnsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* --- Internal Pillar Styling --- */
+.menuColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  margin: 0 0 12px 0;
+}
+
+.columnSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #F4F1EA;
+  opacity: 0.4;
+  margin: 0 0 44px 0;
+}
+
+.rowsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* --- High-Class Custom Service Row Component --- */
+.serviceRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Masterclass directional displacement hover transform */
+.serviceRow:hover {
+  transform: translateX(8px);
+}
+
+.mainLine {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.serviceName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.serviceRow:hover .serviceName {
+  color: #D4AF37;
+}
+
+/* Premium dynamic stitch-dotted connector line block */
+.stitchDots {
+  flex-grow: 1;
+  margin: 0 16px 6px 16px;
+  height: 1px;
+  border-bottom: 1px dotted rgba(244, 241, 234, 0.2);
+  transition: border-color 0.4s ease;
+}
+
+.serviceRow:hover .stitchDots {
+  border-color: #D4AF37;
+}
+
+.servicePrice {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #D4AF37;
+  white-space: nowrap;
+}
+
+.metaLine {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.timeTag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #F4F1EA;
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+.serviceRow:hover .timeTag {
+  opacity: 0.7;
+}
+
+/* --- Media Queries: Mobile & Tablet Realignment Conversions --- */
+@media (max-width: 1100px) {
+  .columnsGrid {
+    gap: 48px;
+  }
+  .columnTitle {
+    font-size: 1.95rem;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Absolute structural collapse down to a single neat, orderly stacked grid */
+  .columnsGrid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+  .columnSubtitle {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .columnTitle {
+    font-size: 1.7rem;
+  }
+  .serviceName {
+    font-size: 1.25rem;
+  }
+  .servicePrice {
+    font-size: 0.95rem;
+  }
+  .stitchDots {
+    margin: 0 10px 4px 10px;
+  }
+}

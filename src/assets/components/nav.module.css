@@ -1,0 +1,289 @@
+/* --- Core Layout Structural Block --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: rgba(11, 12, 16, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(74, 59, 50, 0.15);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: border-color 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Brand Typography --- */
+.logo {
+  flex: 1;
+  min-width: 0;
+}
+
+.logo a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: #F6F2E8;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.02);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  white-space: nowrap;
+}
+
+.brandText,
+.brandTextAlt {
+  display: inline-block;
+}
+
+.logo a::before {
+  content: '';
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid #C8A46A;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* --- Desktop Layout Grid Components --- */
+.menu {
+  display: flex;
+  gap: 56px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- High-Class Link Transitions & Opacity Transforms --- */
+.link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #F4F1EA;
+  opacity: 0.6;
+  text-decoration: none;
+  position: relative;
+  padding: 10px 0;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+/* Sub-pixel Antique Gold Thread Underline Animation */
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #D4AF37;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* --- Premium Framed CTA Action --- */
+.action {
+  display: block;
+}
+
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #D4AF37;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 14px 32px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.btn:hover {
+  color: #0B0C10;
+  border-color: #D4AF37;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -101%;
+  width: 100%;
+  height: 100%;
+  background-color: #D4AF37;
+  z-index: -1;
+  transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn:hover::before {
+  left: 0;
+}
+
+/* --- Mobile Responsive Touch Targets Token --- */
+.trigger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  z-index: 1100;
+}
+
+.triggerLine {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background-color: #F4F1EA;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
+}
+
+/* --- Mobile Full-Screen Overlay Curtain System --- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(11, 12, 16, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlayContainer {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.overlayMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.overlayLink {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #F4F1EA;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.overlayLink:hover {
+  transform: scale(1.05);
+  color: #D4AF37;
+}
+
+.overlayBtn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  border: 1px solid #D4AF37;
+  padding: 16px 40px;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* --- Media Queries: Responsive Mechanics (Phone & Tablet) --- */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+  .menu, .action {
+    display: none;
+  }
+  .trigger {
+    display: flex;
+  }
+  
+  /* Trigger Transformation into Modern Stitch Close Token */
+  .triggerActive .triggerLine:nth-child(1) {
+    transform: translateY(3.5px) rotate(45deg);
+    background-color: #D4AF37;
+  }
+  .triggerActive .triggerLine:nth-child(2) {
+    transform: translateY(-3.5px) rotate(-45deg);
+    background-color: #D4AF37;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo a {
+    font-size: 1.05rem;
+    letter-spacing: 0.16em;
+    gap: 0.35rem;
+  }
+
+  .logo a::before {
+    width: 0.48rem;
+    height: 0.48rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 80px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .logo a {
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    gap: 0.3rem;
+  }
+  .logo a::before {
+    width: 0.42rem;
+    height: 0.42rem;
+  }
+  .overlayLink {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,246 @@
+/* --- Master Hero Canvas --- */
+.hero {
+  background-color: #0B0C10;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 90px; /* Safe clearing for navigation bar header */
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* --- Left Column: Typographic Details --- */
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 24px;
+}
+
+.headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #F4F1EA;
+  margin: 0 0 28px 0;
+}
+
+.paragraph {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #F4F1EA;
+  opacity: 0.6;
+  max-width: 480px;
+  margin: 0 0 44px 0;
+}
+
+/* --- High-Class Minimal Text Link Animation --- */
+.actionFrame {
+  display: inline-block;
+}
+
+.ctaLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #F4F1EA;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Sub-pixel Gold Underline expanding on link focus hover */
+.ctaLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #D4AF37;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ctaLink:hover::after {
+  width: 100%;
+}
+
+.arrowIcon {
+  color: #D4AF37;
+  font-size: 1.1rem;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ctaLink:hover .arrowIcon {
+  transform: translateX(8px);
+}
+
+/* --- Right Column: Asymmetrical Editorial Image Array --- */
+.visualBlock {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Clean Clipping Masks & Image Wrappers */
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #12131a;
+}
+
+/* Premium Optical Opacity & Smooth Zoom Transform Scaling */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.88;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+/* Primary Portrait Layout Frame */
+.primaryFrame {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 72%;
+  height: 520px;
+  z-index: 2;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  border: 1px solid rgba(74, 59, 50, 0.15);
+}
+
+/* Overlapping Secondary Detail Layout Frame */
+.detailFrame {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  width: 48%;
+  height: 320px;
+  z-index: 3;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* --- Media Queries: Responsive Device Alignment Transformations --- */
+@media (max-width: 1100px) {
+  .headline {
+    font-size: 3.2rem;
+  }
+  .visualBlock {
+    height: 520px;
+  }
+  .primaryFrame {
+    height: 440px;
+  }
+  .detailFrame {
+    height: 260px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    min-height: auto;
+  }
+  .container {
+    padding: 0 40px;
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+  .textBlock {
+    align-items: center;
+    text-align: center;
+  }
+  .paragraph {
+    max-width: 540px;
+  }
+  .visualBlock {
+    max-width: 580px;
+    margin: 0 auto;
+    height: 580px;
+  }
+  .primaryFrame {
+    top: 0;
+    height: 500px;
+  }
+  .detailFrame {
+    bottom: 0;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+  .container {
+    padding: 0 24px;
+    gap: 56px;
+  }
+  .headline {
+    font-size: 2.3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .paragraph {
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+  .visualBlock {
+    height: 420px;
+    max-width: 100%;
+  }
+  .primaryFrame {
+    width: 80%;
+    height: 360px;
+  }
+  .detailFrame {
+    width: 55%;
+    height: 220px;
+    bottom: 10px;
+  }
+}

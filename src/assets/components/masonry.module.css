@@ -1,0 +1,190 @@
+/* --- Lookbook Masonry Framework Context --- */
+.masonryBlock {
+  width: 100%;
+  background-color: #0B0C10;
+}
+
+/* Elite asymmetric staggering grid layout engine */
+.masonryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 280px;
+  gap: 40px;
+}
+
+/* --- Structural Card Layout Classes --- */
+.gridItem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Staggered card height matrix adjustments */
+.tall {
+  grid-row: span 2;
+}
+
+.wide {
+  grid-column: span 1;
+  grid-row: span 1.5;
+}
+
+.square {
+  grid-row: span 1.5;
+}
+
+/* --- High-Class Image Container Frame --- */
+.frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(74, 59, 50, 0.12);
+  background-color: #12131a;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.85;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s ease;
+}
+
+/* --- The Luxury Hover / Interaction Overlay Layer --- */
+.overlayLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(11, 12, 16, 0.3) 0%, rgba(11, 12, 16, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+/* Elite transformation and depth hooks triggered simultaneously */
+.frame:hover .image {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
+.frame:hover .overlayLayer {
+  opacity: 1;
+}
+
+/* --- Typographic Elements INSIDE Overlay --- */
+.metaTop {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.typeTag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  background-color: rgba(11, 12, 16, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 8px 16px;
+}
+
+.metaBottom {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(15px);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.frame:hover .metaBottom {
+  transform: translateY(0);
+}
+
+.itemTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  margin: 0 0 16px 0;
+}
+
+.threadLine {
+  width: 0;
+  height: 1px;
+  background-color: #D4AF37;
+  margin-bottom: 16px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.frame:hover .threadLine {
+  width: 48px;
+}
+
+.fabricDetails {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #F4F1EA;
+  opacity: 0.6;
+}
+
+/* --- Media Queries: Responsive Compressions (Tablets & Phones) --- */
+@media (max-width: 1024px) {
+  .masonryGrid {
+    gap: 32px;
+    grid-auto-rows: 240px;
+  }
+  .overlayLayer {
+    padding: 32px;
+    opacity: 1; /* Retain overlay visibility on touch screens */
+    background: linear-gradient(180deg, rgba(11, 12, 16, 0.1) 0%, rgba(11, 12, 16, 0.85) 100%);
+  }
+  .metaBottom {
+    transform: translateY(0);
+  }
+  .threadLine {
+    width: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Absolute structural re-alignment down to single neat column */
+  .masonryGrid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 40px;
+  }
+  .tall, .wide, .square {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .frame {
+    height: 440px;
+  }
+  .itemTitle {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame {
+    height: 360px;
+  }
+  .overlayLayer {
+    padding: 24px;
+  }
+  .itemTitle {
+    font-size: 1.45rem;
+    margin-bottom: 12px;
+  }
+}

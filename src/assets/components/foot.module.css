@@ -1,0 +1,221 @@
+/* --- Master Footer Canvas wrapper --- */
+.footer {
+  background-color: #0B0C10;
+  border-top: 1px solid rgba(74, 59, 50, 0.15);
+  padding: 120px 0 40px 0;
+  width: 100%;
+  margin-top: auto;
+  overflow: hidden;
+}
+
+/* --- Balanced High-End Core Grid System --- */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.5fr;
+  gap: 80px;
+}
+
+/* --- Brand Identity Architecture --- */
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  color: #F4F1EA;
+  margin: 0;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #F4F1EA;
+  opacity: 0.5;
+  max-width: 320px;
+  margin: 0;
+}
+
+/* --- Grid Structure for Internal Links --- */
+.linksColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin: 0 0 28px 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --- High-Class Link Items & Subtle Shift Interaction --- */
+.itemLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #F4F1EA;
+  opacity: 0.6;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.itemLink:hover {
+  opacity: 1;
+  transform: translateX(6px);
+  color: #D4AF37;
+}
+
+/* --- Gazette Newsletter Portal Block --- */
+.journalColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.journalText {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #F4F1EA;
+  opacity: 0.5;
+  margin: 0 0 24px 0;
+}
+
+/* --- Minimal Underline Input Design --- */
+.form {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid rgba(244, 241, 234, 0.2);
+  padding-bottom: 8px;
+  transition: border-color 0.4s ease;
+}
+
+.form:focus-within {
+  border-color: #D4AF37;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #F4F1EA;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  width: 100%;
+  padding-right: 40px;
+}
+
+.input::placeholder {
+  color: #F4F1EA;
+  opacity: 0.25;
+}
+
+.submitBtn {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #D4AF37;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.arrow {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.form:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* --- Bottom Monolithic Dash-Stitch Line --- */
+.bottomBoundary {
+  max-width: 1440px;
+  margin: 90px auto 0 auto;
+  padding: 40px 60px 0 60px;
+  border-top: 1px dashed rgba(74, 59, 50, 0.15);
+  text-align: center;
+}
+
+.copyright {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #F4F1EA;
+  opacity: 0.3;
+  margin: 0;
+}
+
+/* --- Responsive Adaptations (Tablet & Phones) --- */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 80px 0 30px 0;
+  }
+  .container {
+    padding: 0 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 40px;
+  }
+  .journalColumn {
+    grid-column: span 2;
+    max-width: 480px;
+  }
+  .bottomBoundary {
+    margin-top: 60px;
+    padding: 30px 40px 0 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 24px;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .linksColumn {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .journalColumn {
+    grid-column: span 1;
+  }
+  .bottomBoundary {
+    padding: 30px 24px 0 24px;
+  }
+  .copyright {
+    font-size: 0.65rem;
+    line-height: 1.6;
+  }
+}

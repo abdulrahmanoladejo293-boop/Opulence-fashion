@@ -1,0 +1,147 @@
+/* --- Coordinates Section Box Framework --- */
+.coordsBlock {
+  width: 100%;
+  background-color: #0B0C10;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+/* --- High-Class Coordinate Card Micro-Architecture --- */
+.coordinateCard {
+  background-color: rgba(20, 21, 26, 0.25);
+  border: 1px solid rgba(74, 59, 50, 0.12);
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
+}
+
+/* Custom premium hover depth shift trigger hook */
+.coordinateCard:hover {
+  border-color: rgba(212, 175, 55, 0.25);
+  background-color: rgba(20, 21, 26, 0.45);
+}
+
+.cardIndex {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 24px;
+}
+
+.cardHeading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  margin: 0 0 16px 0;
+}
+
+/* Expandable sub-pixel custom stitch divider line */
+.stitchDivider {
+  width: 32px;
+  height: 1px;
+  border-bottom: 1px dashed rgba(244, 241, 234, 0.15);
+  margin-bottom: 24px;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease;
+}
+
+.coordinateCard:hover .stitchDivider {
+  width: 100%;
+  border-color: #D4AF37;
+}
+
+.cardDetails {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #F4F1EA;
+  opacity: 0.6;
+  margin: 0 0 36px 0;
+}
+
+.label {
+  color: #D4AF37;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* --- Internal Schedule Matrix Grid System --- */
+.scheduleMatrix {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.scheduleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(244, 241, 234, 0.05);
+  padding-bottom: 8px;
+}
+
+.dayLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #F4F1EA;
+  opacity: 0.5;
+}
+
+.hourValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  opacity: 0.85;
+}
+
+.coordinateCard:hover .hourValue {
+  color: #D4AF37;
+}
+
+/* Minimalist legalistic baseline annotations */
+.footnote {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #F4F1EA;
+  opacity: 0.3;
+  margin-top: auto;
+}
+
+/* --- Media Queries: Immaculate Multi-Breakpoint Responsive Adapts --- */
+@media (max-width: 1150px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .coordinateCard {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .coordinateCard {
+    padding: 32px 24px;
+  }
+  .cardHeading {
+    font-size: 1.55rem;
+  }
+  .cardDetails, .dayLabel, .hourValue {
+    font-size: 0.85rem;
+  }
+}

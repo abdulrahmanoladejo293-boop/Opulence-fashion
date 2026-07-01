@@ -1,0 +1,177 @@
+/* --- Booking Master Page Layout Wrapper --- */
+.bookingWrapper {
+  background-color: #0B0C10;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Typographic Invitation Header Context --- */
+.bookingHeader {
+  background-color: #0B0C10;
+  padding: 170px 0 40px 0; /* Clear space below fixed top navigation header */
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.titleStack {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 24px;
+}
+
+.mainTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.2rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: #F4F1EA;
+  margin: 0 0 24px 0;
+}
+
+/* Sub-pixel Antique Gold Thread Dash Line Break */
+.stitchLine {
+  width: 48px;
+  height: 1px;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.4);
+  margin-bottom: 28px;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #F4F1EA;
+  opacity: 0.55;
+  margin: 0;
+}
+
+/* --- Main Form Grid Boundaries --- */
+.bookingMain {
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+/* --- Studio Coordinates Section Boundaries --- */
+.coordsSection {
+  width: 100%;
+  padding-bottom: 140px;
+  border-top: 1px solid rgba(74, 59, 50, 0.1);
+  background-color: #0B0C10;
+}
+
+.coordsHeader {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coordsTag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 16px;
+}
+
+.coordsTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  margin: 0;
+}
+
+/* --- Media Queries: Immaculate Mobile Device Alignment Transformations --- */
+@media (max-width: 1024px) {
+  .bookingHeader {
+    padding: 140px 0 32px 0;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .mainTitle {
+    font-size: 3.4rem;
+  }
+  .description {
+    font-size: 0.95rem;
+  }
+  .bookingMain {
+    padding-bottom: 80px;
+  }
+  .coordsHeader {
+    margin-top: 80px;
+    margin-bottom: 48px;
+  }
+  .coordsTitle {
+    font-size: 2.4rem;
+  }
+  .coordsSection {
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bookingHeader {
+    padding: 120px 0 24px 0;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .mainTitle {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .bookingMain {
+    padding-bottom: 60px;
+  }
+  .coordsHeader {
+    margin-top: 60px;
+    margin-bottom: 36px;
+  }
+  .coordsTitle {
+    font-size: 1.95rem;
+    line-height: 1.25;
+  }
+  .coordsSection {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2.1rem;
+  }
+}

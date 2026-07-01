@@ -1,0 +1,266 @@
+/* --- Macro Focus Master Block Layout --- */
+.macroFocus {
+  width: 100%;
+  background-color: #0B0C10;
+  padding: 140px 0;
+  border-top: 1px solid rgba(74, 59, 50, 0.1);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* --- Left Column Layout Architecture --- */
+.menuColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerBlock {
+  margin-bottom: 56px;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #F4F1EA;
+  margin: 0;
+}
+
+.selectorList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --- High-Class Custom Interactive Selection Buttons --- */
+.selectorRow {
+  background: transparent;
+  border: 1px solid rgba(74, 59, 50, 0.12);
+  outline: none;
+  padding: 28px 32px;
+  text-align: left;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
+}
+
+.selectorRow:hover {
+  border-color: rgba(244, 241, 234, 0.2);
+  background-color: rgba(20, 21, 26, 0.25);
+}
+
+.rowLead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rowNumber {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #D4AF37;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.rowLineToken {
+  width: 16px;
+  height: 1px;
+  background-color: rgba(74, 59, 50, 0.3);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
+}
+
+.rowContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rowTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #F4F1EA;
+  opacity: 0.6;
+  margin: 0;
+  transition: opacity 0.4s ease, color 0.4s ease;
+}
+
+.rowMetric {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Active Layout Component States --- */
+.activeRow {
+  border-color: rgba(212, 175, 55, 0.3);
+  background-color: rgba(20, 21, 26, 0.45);
+}
+
+.activeRow .rowNumber {
+  opacity: 1;
+}
+
+.activeRow .rowLineToken {
+  width: 32px;
+  background-color: #D4AF37;
+}
+
+.activeRow .rowTitle {
+  opacity: 1;
+  color: #F4F1EA;
+}
+
+.activeRow .rowMetric {
+  opacity: 0.8;
+  transform: translateX(0);
+}
+
+/* --- Right Column Viewport Display Cards --- */
+.displayColumn {
+  width: 100%;
+}
+
+.displayCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.imageFrameWrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  border: 1px solid rgba(74, 59, 50, 0.15);
+  background-color: #12131a;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.macroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.9;
+}
+
+.lensShade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 60%, rgba(11, 12, 16, 0.7) 100%);
+  z-index: 2;
+}
+
+.cardDetails {
+  max-width: 480px;
+}
+
+.detailText {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #F4F1EA;
+  opacity: 0.55;
+  margin: 0;
+}
+
+/* --- Media Queries: Flawless Mobile Re-alignments --- */
+@media (max-width: 1100px) {
+  .container {
+    gap: 48px;
+  }
+  .heading {
+    font-size: 2.8rem;
+  }
+  .imageFrameWrapper {
+    height: 320px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .macroFocus {
+    padding: 100px 0;
+  }
+  .container {
+    padding: 0 40px;
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+  .headerBlock {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+  .imageFrameWrapper {
+    height: 400px;
+  }
+  .cardDetails {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 24px;
+    gap: 48px;
+  }
+  .heading {
+    font-size: 2.2rem;
+  }
+  .selectorRow {
+    padding: 20px 24px;
+    gap: 16px;
+  }
+  .rowTitle {
+    font-size: 1.2rem;
+  }
+  .imageFrameWrapper {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.95rem;
+    line-height: 1.25;
+  }
+  .imageFrameWrapper {
+    height: 240px;
+  }
+}

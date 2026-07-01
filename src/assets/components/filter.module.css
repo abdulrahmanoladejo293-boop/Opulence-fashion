@@ -1,0 +1,106 @@
+/* --- Filter Navigation Container --- */
+.filterControl {
+  position: relative;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+/* Touch-safe interactive horizontally sliding scroll track for mobile viewports */
+.track {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scrollbar-width: none; /* Hide standard ugly scrolls for Firefox */
+}
+
+.track::-webkit-scrollbar {
+  display: none; /* Hide standard scrolls for Chrome and Safari layout engines */
+}
+
+/* --- Premium Minimal Interactive Button Styles --- */
+.filterBtn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 4px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px; /* Meet absolute responsive mobile touch targets token rules */
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #F4F1EA;
+  opacity: 0.4;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s ease;
+}
+
+/* Subtle optical layer shifts */
+.filterBtn:hover .label {
+  opacity: 0.8;
+}
+
+.activeBtn .label {
+  opacity: 1;
+  color: #D4AF37;
+  font-weight: 500;
+}
+
+/* --- High-Class Gold Thread Active Marker Line --- */
+.activeLine {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #D4AF37;
+  z-index: 2;
+}
+
+/* Monolithic thin dash stitch alignment line bounding the category system */
+.baseStitchLine {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid rgba(74, 59, 50, 0.15);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- Media Queries: Touch device fluid configurations --- */
+@media (max-width: 768px) {
+  .track {
+    justify-content: flex-start;
+    padding-left: 24px;
+    padding-right: 24px;
+    gap: 32px;
+  }
+  .label {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterControl {
+    margin-bottom: 44px;
+  }
+  .track {
+    gap: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

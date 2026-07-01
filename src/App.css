@@ -1,0 +1,92 @@
+/* ==========================================================================
+   🏛️ THE ATELIER RE-ROOT DESIGN CORE SYSTEM (GLOBAL APP HOOKS)
+   ========================================================================== */
+
+/* --- 1. Master Variable Palette Matrix --- */
+:root {
+  --midnight: #111111;     /* Deep charcoal gallery backdrop */
+  --linen: #F6F2E8;        /* Warm ivory text hue */
+  --gold: #C8A46A;         /* Soft brushed bronze accent */
+  --thread: #8A6A4A;       /* Rich brown border line color */
+  --studio-card: #1A1713;  /* Elevated warm charcoal backdrop */
+  
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* --- 2. Clean Core Reset Protocols --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--midnight);
+  color: var(--linen);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* --- 3. Permanent Global Frame Framework Layout --- */
+.app-root-canvas {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--midnight);
+  width: 100%;
+}
+
+/* Pushes the masterpiece brand footer to the absolute bottom of short pages */
+.main-content-wrapper {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- 4. Extraordinary General Selection Highlights --- */
+::selection {
+  background-color: var(--gold);
+  color: var(--midnight);
+}
+
+/* --- 5. Clean Custom Architectural Scrollbars --- */
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--midnight);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(212, 175, 55, 0.2);
+  border-radius: 0px; /* Sharp, geometric monolithic styling lines */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gold);
+}
+
+/* --- 6. Media Queries: Fluid Dynamic Device Typography Adjustments --- */
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px; /* Scales all components neatly and uniformly on iPads and tablets */
+  }
+  body::-webkit-scrollbar {
+    width: 4px; /* Narrower scroll blueprint for touch targets */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px; /* Scales down text layouts precisely on small mobile phone screens */
+  }
+}

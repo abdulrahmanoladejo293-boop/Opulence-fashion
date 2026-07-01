@@ -1,0 +1,243 @@
+/* --- Concierge Portal Box Framework --- */
+.portalWrapper {
+  width: 100%;
+  background-color: #0B0C10;
+}
+
+.formContainer {
+  background-color: rgba(20, 21, 26, 0.35);
+  border: 1px solid rgba(74, 59, 50, 0.12);
+  padding: 64px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px 48px;
+  width: 100%;
+}
+
+/* --- Phenomenal Underline Floating Input Component --- */
+.inputGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroupFull {
+  grid-column: span 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Clean, completely borderless background text field architecture */
+.inputField, .textareaField {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(244, 241, 234, 0.2);
+  color: #F4F1EA;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 12px 0;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  transition: border-color 0.4s ease;
+}
+
+/* --- Floating Label Animation Mechanics --- */
+.inputLabel {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #F4F1EA;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              font-size 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              color 0.4s ease, 
+              opacity 0.4s ease;
+}
+
+/* Float label upward beautifully if input text field has content or is active focused */
+.inputField:focus ~ .inputLabel,
+.inputField:not(:placeholder-shown) ~ .inputLabel,
+.textareaField:focus ~ .inputLabel,
+.textareaField:not(:placeholder-shown) ~ .inputLabel {
+  transform: translateY(-24px);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  opacity: 1;
+}
+
+/* --- Custom Gold Thread Focus Indicator Line --- */
+.focusStitch {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #D4AF37;
+  z-index: 3;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inputField:focus ~ .focusStitch,
+.textareaField:focus ~ .focusStitch {
+  width: 100%;
+  left: 0;
+}
+
+/* --- High-Class Specialty Option & Calendar Dropdowns --- */
+.selectField, .dateField {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(244, 241, 234, 0.2);
+  color: #F4F1EA;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 12px 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.selectField option {
+  background-color: #14151a;
+  color: #F4F1EA;
+}
+
+.selectLabel, .dateLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 6px;
+}
+
+.staticStitch {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.selectField:focus, .dateField:focus {
+  border-color: #D4AF37;
+}
+
+/* --- Elite Framing Submission Button Core --- */
+.actionBlock {
+  margin-top: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitBtn {
+  background-color: transparent;
+  border: 1px solid #D4AF37;
+  outline: none;
+  cursor: pointer;
+  padding: 18px 44px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.submitBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -101%;
+  width: 100%;
+  height: 100%;
+  background-color: #D4AF37;
+  z-index: -1;
+  transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.submitBtn:hover {
+  color: #0B0C10;
+}
+
+.submitBtn:hover::before {
+  left: 0;
+}
+
+.btnArrow {
+  font-size: 1.1rem;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.submitBtn:hover .btnArrow {
+  transform: translateX(6px);
+}
+
+/* --- Media Queries: Mobile & Tablet Realignment Conversions --- */
+@media (max-width: 1024px) {
+  .formContainer {
+    padding: 48px;
+  }
+  .formGrid {
+    gap: 48px 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Absolute structural collapse down to a single neat, orderly stacked grid */
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+  .inputGroupFull {
+    grid-column: span 1;
+  }
+  .actionBlock {
+    margin-top: 48px;
+    justify-content: center;
+  }
+  .submitBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer {
+    padding: 36px 24px;
+  }
+  .inputField, .textareaField, .selectField, .dateField {
+    font-size: 0.9rem;
+  }
+  .inputLabel {
+    font-size: 0.85rem;
+  }
+  .submitBtn {
+    padding: 16px 24px;
+    font-size: 0.75rem;
+  }
+}

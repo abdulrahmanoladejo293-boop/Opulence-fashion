@@ -1,0 +1,121 @@
+/* --- Fabric Vault Master Page Layout Wrapper --- */
+.vaultWrapper {
+  background-color: #0B0C10;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Typographic Sourcing Header Context --- */
+.vaultHeader {
+  background-color: #0B0C10;
+  padding: 170px 0 60px 0; /* Clear space below fixed top navbar header */
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.titleStack {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 24px;
+}
+
+.mainTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.2rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: #F4F1EA;
+  margin: 0 0 24px 0;
+}
+
+/* Sub-pixel Antique Gold Thread Dash Line Break */
+.stitchLine {
+  width: 48px;
+  height: 1px;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.4);
+  margin-bottom: 28px;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #F4F1EA;
+  opacity: 0.55;
+  margin: 0;
+}
+
+/* --- Main Active Catalog Boundaries --- */
+.vaultMain {
+  width: 100%;
+  padding-bottom: 140px;
+}
+
+/* --- Media Queries: Immaculate Mobile Device Alignment Transformations --- */
+@media (max-width: 1024px) {
+  .vaultHeader {
+    padding: 140px 0 44px 0;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .mainTitle {
+    font-size: 3.4rem;
+  }
+  .description {
+    font-size: 0.95rem;
+  }
+  .vaultMain {
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .vaultHeader {
+    padding: 120px 0 32px 0;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .mainTitle {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .vaultMain {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2.1rem;
+  }
+}

@@ -1,0 +1,143 @@
+/* --- Heritage Section Wrapper --- */
+.heritage {
+  background-color: #0B0C10;
+  padding: 140px 0;
+  width: 100%;
+  border-top: 1px solid rgba(74, 59, 50, 0.1);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 100px;
+  align-items: center;
+}
+
+/* --- Left Column Typographic Details --- */
+.textColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: #F4F1EA;
+  margin: 0 0 24px 0;
+}
+
+/* Sub sub-pixel Gold Thread Dash Divider */
+.stitchDivider {
+  width: 60px;
+  height: 1px;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.4);
+  margin-bottom: 32px;
+}
+
+.paragraph {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #F4F1EA;
+  opacity: 0.55;
+  margin: 0 0 24px 0;
+}
+
+.paragraph:last-of-type {
+  margin-bottom: 0;
+}
+
+/* --- Right Column Layout Frame --- */
+.imageColumn {
+  position: relative;
+  width: 100%;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+  border: 1px solid rgba(74, 59, 50, 0.15);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  background-color: #12131a;
+}
+
+/* Premium smooth zoom and opacity transform hover system */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.85;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* --- Media Queries: Clean Device Transitions (Tablets & Phones) --- */
+@media (max-width: 1200px) {
+  .container {
+    gap: 60px;
+  }
+  .heading {
+    font-size: 2.8rem;
+  }
+  .imageWrapper {
+    height: 480px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heritage {
+    padding: 100px 0;
+  }
+  .container {
+    padding: 0 40px;
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+  .textColumn {
+    align-items: center;
+    text-align: center;
+  }
+  .imageColumn {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 24px;
+    gap: 48px;
+  }
+  .heading {
+    font-size: 2.1rem;
+    line-height: 1.25;
+  }
+  .imageWrapper {
+    height: 380px;
+  }
+}
