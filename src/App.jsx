@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './app.css';
+import './App.css';
 
 // 🧱 Import layout frame components from your actual assets folder path
 import Nav from './assets/components/nav';
