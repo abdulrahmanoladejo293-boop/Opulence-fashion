@@ -11,7 +11,7 @@ export default function Masonry() {
   const transitionEase = [0.16, 1, 0.3, 1];
 
   const items = [
-    { img: workImage, title: "The Sovereign Silhouette Line", fabric: "Premium Structured Textile Array", type: "Bespoke Creation", size: "tall" },
+    { img: workImage, title: "The Sovereign Silhouette Lines", fabric: "Premium Structured Textile Array", type: "Bespoke Creation", size: "tall" },
     { img: womanPortrait, title: "The Silk Evening Contour", fabric: "Bespoke Delicate Fabric Blends", type: "Haute Couture", size: "wide" },
     { img: measureDetail, title: "The Double-Breasted Overcoat", fabric: "Heavy Textured Sourced Wool", type: "Signature Cut", size: "square" },
     { img: clothesTexture, title: "The Minimalist Tapered Trouser", fabric: "Organic Flax Structural Lining", type: "Refined Adjustment", size: "tall" },
