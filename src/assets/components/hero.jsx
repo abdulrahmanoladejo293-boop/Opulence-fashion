@@ -53,7 +53,6 @@ export default function Hero() {
         </motion.div>
 
         <div className={styles.visualBlock}>
-          {/* Primary Viewport Image slotted to your hero.png */}
           <motion.div 
             initial={{ opacity: 0, scale: 1.1, y: 40 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -65,7 +64,6 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Secondary Detail Frame slotted to your tailor.jpg */}
           <motion.div 
             initial={{ opacity: 0, scale: 1.1, x: 30 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}

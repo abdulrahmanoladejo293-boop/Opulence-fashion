@@ -6,7 +6,6 @@ import styles from './heritage.module.css';
 export default function Heritage() {
   const transitionEase = [0.16, 1, 0.3, 1];
 
-  // Animation layout variants for high-class text fades
   const textFadeVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -20,7 +19,6 @@ export default function Heritage() {
     <section className={styles.heritage}>
       <div className={styles.container}>
         
-        {/* Left Side: Split Typographic Narrative */}
         <motion.div 
           initial="hidden"
           whileInView="visible"
@@ -47,7 +45,6 @@ export default function Heritage() {
           </motion.p>
         </motion.div>
 
-        {/* Right Side: High-Class Portrait Image Frame */}
         <motion.div 
           initial={{ opacity: 0, scale: 1.06, y: 40 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}

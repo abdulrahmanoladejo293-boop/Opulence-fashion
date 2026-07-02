@@ -1,4 +1,3 @@
-/* --- Fabric Vault Master Page Layout Wrapper --- */
 .vaultWrapper {
   background-color: #0B0C10;
   width: 100%;
@@ -7,10 +6,9 @@
   flex-direction: column;
 }
 
-/* --- Typographic Sourcing Header Context --- */
 .vaultHeader {
   background-color: #0B0C10;
-  padding: 170px 0 60px 0; /* Clear space below fixed top navbar header */
+  padding: 170px 0 60px 0; 
   width: 100%;
 }
 
@@ -50,7 +48,6 @@
   margin: 0 0 24px 0;
 }
 
-/* Sub-pixel Antique Gold Thread Dash Line Break */
 .stitchLine {
   width: 48px;
   height: 1px;
@@ -68,13 +65,11 @@
   margin: 0;
 }
 
-/* --- Main Active Catalog Boundaries --- */
 .vaultMain {
   width: 100%;
   padding-bottom: 140px;
 }
 
-/* --- Media Queries: Immaculate Mobile Device Alignment Transformations --- */
 @media (max-width: 1024px) {
   .vaultHeader {
     padding: 140px 0 44px 0;

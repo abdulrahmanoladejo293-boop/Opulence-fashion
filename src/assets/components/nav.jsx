@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion'; 
 import styles from './nav.module.css';
 
 export default function Nav() {
@@ -7,17 +7,15 @@ export default function Nav() {
   const [hidden, setHidden] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Elite scroll tracking: slides navbar up on scroll down, reveals on scroll up
-  useMotionValueEvent(scrollY, "change", (latest) => {
+  useMotionValueEvent(scrollY, "change", (latest) => { 
     const previous = scrollY.getPrevious() ?? 0;
     if (latest > previous && latest > 120 && !isOpen) {
-      setHidden(true);
+      setHidden(true); 
     } else {
       setHidden(false);
     }
   });
 
-  // Lock body scroll when mobile full-screen overlay menu is active
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';

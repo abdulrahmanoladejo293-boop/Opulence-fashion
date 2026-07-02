@@ -11,7 +11,7 @@ export default function Cloth() {
   return (
     <div className={styles.vaultWrapper}>
       
-      {/* Editorial Sourcing Header Intro Block */}
+      {}
       <header className={styles.vaultHeader}>
         <div className={styles.container}>
           <motion.div 
@@ -30,14 +30,12 @@ export default function Cloth() {
         </div>
       </header>
 
-      {/* Main Interactive Showroom Section Wrap */}
+      
       <main className={styles.vaultMain}>
         <div className={styles.container}>
           
-          {/* Step 13: Thin Line Categorization Selector Component Menu */}
           <Filter activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
           
-          {/* Step 14: Dynamic High-Class Swatch Grid Component Catalog */}
           <Swatch activeFilter={activeFilter} />
           
         </div>

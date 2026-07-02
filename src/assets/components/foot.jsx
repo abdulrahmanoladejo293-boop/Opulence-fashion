@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import styles from './foot.module.css';
 
 export default function Foot() {
-  // Masterclass staggered text fade configuration for footer columns
   const footerVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -36,7 +35,6 @@ export default function Foot() {
     >
       <div className={styles.container}>
         
-        {/* Pillar A: Brand Manifestation & Monogram */}
         <motion.div variants={columnVariants} className={styles.brandColumn}>
           <h2 className={styles.title}>OPULENCE FASHION</h2>
           <p className={styles.description}>
@@ -44,7 +42,6 @@ export default function Foot() {
           </p>
         </motion.div>
 
-        {/* Pillar B: Orderly Navigation Matrices (Tablet Split) */}
         <motion.div variants={columnVariants} className={styles.linksColumn}>
           <div className={styles.linkGroup}>
             <h4 className={styles.heading}>The House</h4>
@@ -64,7 +61,6 @@ export default function Foot() {
           </div>
         </motion.div>
 
-        {/* Pillar C: The Gazette Editorial Sign-up */}
         <motion.div variants={columnVariants} className={styles.journalColumn}>
           <h4 className={styles.heading}>The Lookbook Gazette</h4>
           <p className={styles.journalText}>
@@ -85,7 +81,6 @@ export default function Foot() {
 
       </div>
 
-      {/* The Monolithic Digital Stitch Line Boundary */}
       <div className={styles.bottomBoundary}>
         <p className={styles.copyright}>
           — © 2026 Opulence Fashion. All Patterns, Cuts, and Code Records Reserved. —

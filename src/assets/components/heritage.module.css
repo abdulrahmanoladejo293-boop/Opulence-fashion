@@ -1,4 +1,3 @@
-/* --- Heritage Section Wrapper --- */
 .heritage {
   background-color: #0B0C10;
   padding: 140px 0;
@@ -18,7 +17,6 @@
   align-items: center;
 }
 
-/* --- Left Column Typographic Details --- */
 .textColumn {
   display: flex;
   flex-direction: column;
@@ -44,7 +42,6 @@
   margin: 0 0 24px 0;
 }
 
-/* Sub sub-pixel Gold Thread Dash Divider */
 .stitchDivider {
   width: 60px;
   height: 1px;
@@ -66,7 +63,6 @@
   margin-bottom: 0;
 }
 
-/* --- Right Column Layout Frame --- */
 .imageColumn {
   position: relative;
   width: 100%;
@@ -81,7 +77,6 @@
   background-color: #12131a;
 }
 
-/* Premium smooth zoom and opacity transform hover system */
 .image {
   width: 100%;
   height: 100%;
@@ -96,7 +91,6 @@
   opacity: 1;
 }
 
-/* --- Media Queries: Clean Device Transitions (Tablets & Phones) --- */
 @media (max-width: 1200px) {
   .container {
     gap: 60px;
